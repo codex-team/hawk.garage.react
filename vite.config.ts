@@ -5,6 +5,10 @@ import postcssNested from 'postcss-nested';
 export default defineConfig({
   plugins: [react()],
   css: {
+    modules: {
+      scopeBehaviour: 'local',
+      localsConvention: 'camelCaseOnly',
+    },
     postcss: {
       plugins: [
         postcssNested
