@@ -23,7 +23,7 @@ const config: StorybookViteConfig = {
     "storyStoreV7": true
   },
   viteFinal: (config) => {
-    let designTokenPaths: string[] = fs
+    const designTokenPaths: string[] = fs
       .readdirSync('./src/commons/themes')
       .filter((fn: string) => fn.endsWith('.css'));
 
@@ -36,8 +36,9 @@ const config: StorybookViteConfig = {
       readCssFiles,
       TokenSourceType.CSS,
       false,
-      true
+      true,
     );
+
     parserOutput.then((tokensGroupByCategory: {
       categories: Category[];
       injectionStyles: string;
@@ -46,7 +47,7 @@ const config: StorybookViteConfig = {
         './design-tokens.source.json',
         JSON.stringify({
           cssTokens: tokensGroupByCategory,
-        })
+        }),
       );
     });
 
