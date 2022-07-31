@@ -1,9 +1,9 @@
 name: ESLint Runner
 on:
-  - pull_request
+  - push
 
 jobs:
-  lint:
+  install-deps:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -12,5 +12,10 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+  lint:
+    runs-on: ubuntu-latest
+    needs:
+      - install-deps
+    steps:
       - name: Run ESLint check
         run: yarn lint:ci
