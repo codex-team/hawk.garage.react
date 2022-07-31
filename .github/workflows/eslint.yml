@@ -1,0 +1,16 @@
+name: ESLint Runner
+on:
+  - pull_request
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run ESLint check
+        run: yarn lint:ci
