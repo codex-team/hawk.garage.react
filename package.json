@@ -40,6 +40,7 @@
     "vite": "^3.0.4"
   },
   "dependencies": {
+    "postcss-mixins": "^9.0.3",
     "postcss-nested": "^5.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
