@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import postcssMixins from 'postcss-mixins';
 import postcssNested from 'postcss-nested';
 
 export default defineConfig({
@@ -12,7 +11,6 @@ export default defineConfig({
     },
     postcss: {
       plugins: [
-        postcssMixins,
         postcssNested
       ]
     }
