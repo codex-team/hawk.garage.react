@@ -1,0 +1,13 @@
+  /**
+  * @tokens Colors
+  * @presenter Color
+  */
+.hds-root-colors-dark  {
+  --color-bg-primary: #2f3341;
+  --color-bg-secondary: #252732;
+  --color-bg-tertiary: #1b1d26;
+  --color-accent-brand: #4979e4;
+  --color-bg-main-transparent: rgba(36, 39, 50, 0);
+  --color-bg-placeholder: #505b74;
+  --color-bg-button-hover: #ecf2ff;
+}
