@@ -3,12 +3,30 @@ import cn from 'classnames';
 import styles from './Text.module.css';
 
 interface Props<AsElement extends React.ElementType> {
+  /**
+   * Displaying value in the Text component
+   */
   children?: React.ReactNode,
+
+  /**
+   * Class name for providing styles to the component
+   */
   className?: string,
 
+  /**
+   * Font weight value
+   */
   weight?: 'regular' | 'medium' | 'bold',
+
+  /**
+   * Font size value
+   * Also changing line height for provided size
+   */
   size?: 's' | 'm',
 
+  /**
+   * 'As' prop helps to use a semantic right tag in the Text component
+   */
   as?: AsElement,
 }
 
