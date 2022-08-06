@@ -1,8 +1,10 @@
-.hds-root {
+.root {
+  --font-family-sans: 'Roboto', sans-serif;
+
   /**
-  * @tokens Spacing
-  * @presenter Spacing
-  */
+   * @tokens Spacing
+   * @presenter Spacing
+   */
   --space-2-xs: 2px;
   --space-xs: 4px;
   --space-s: 8px;
@@ -10,5 +12,31 @@
   --space-l: 16px;
   --space-xl: 24px;
   --space-2-xl: 28px;
-  --space-2-xl: 32px;
+  --space-3-xl: 32px;
+
+  /**
+   * @tokens Font Families
+   * @presenter FontFamily
+   */
+  --text-body-font-family: var(--font-family-sans);
+
+  /**
+   * @tokens Font Weights
+   * @presenter FontWeight
+   */
+  --text-body-font-weight: 400;
+
+  /**
+   * @tokens Font Sizes
+   * @presenter FontSize
+   */
+  --text-body-1-font-size: 14px;
+  --text-body-2-font-size: 18px;
+
+  /**
+   * @tokens Line Heights
+   * @presenter LineHeight
+   */
+  --text-body-1-line-height: 18px;
+  --text-body-2-line-height: 24px;
 }
