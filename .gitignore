@@ -15,7 +15,8 @@ node_modules
 .idea/*
 
 # Build folder
-dist
+dist/*
 
 # Storybook
+storybook-static/*
 design-tokens.source.json

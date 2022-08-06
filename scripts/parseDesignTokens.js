@@ -1,19 +1,28 @@
 const fs = require('fs');
-const parser = require('storybook-design-token/dist/parsers/postcss.parser.js');
+const { parseCssFiles } = require('storybook-design-token/dist/parsers/postcss.parser');
+const { TokenSourceType } = require('storybook-design-token/dist/types/token.types');
 
-let DesignTokenFile = fs.readFileSync('./src/commons/themes/root-colors-dark.css', 'utf8');
+const designTokenPaths = fs
+  .readdirSync('./src/commons/themes')
+  .filter((fn) => fn.endsWith('.css'));
 
-const parserOutput = parser.parseCssFiles(
-  [{ filename: './src/commons/themes/root-colors-dark.css', content: DesignTokenFile }],
-  'CSS',
+const readCssFiles = designTokenPaths.map(filename => ({
+  filename: `./src/commons/themes/${filename}`,
+  content: fs.readFileSync(`./src/commons/themes/${filename}`),
+}))
+
+const parserOutput = parseCssFiles(
+  readCssFiles,
+  TokenSourceType.CSS,
   false,
-  true
+  true,
 );
+
 parserOutput.then((tokensGroupByCategory) => {
   fs.writeFileSync(
-    '.storybook/public/design-tokens.source.json',
+    './design-tokens.source.json',
     JSON.stringify({
       cssTokens: tokensGroupByCategory,
-    })
+    }),
   );
 });
