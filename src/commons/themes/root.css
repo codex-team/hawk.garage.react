@@ -1,8 +1,8 @@
 .hds-root {
   /**
-  * @tokens Spacing
-  * @presenter Spacing
-  */
+   * @tokens Spacing
+   * @presenter Spacing
+   */
   --space-2-xs: 2px;
   --space-xs: 4px;
   --space-s: 8px;
@@ -10,5 +10,32 @@
   --space-l: 16px;
   --space-xl: 24px;
   --space-2-xl: 28px;
-  --space-2-xl: 32px;
+  --space-3-xl: 32px;
+
+  /**
+   * @tokens Font Families
+   * @presenter FontFamily
+   */
+  --font-family-sans: 'Roboto', sans-serif;
+  --text-body-font-family: var(--font-family-sans);
+
+  /**
+   * @tokens Font Weights
+   * @presenter FontWeight
+   */
+  --text-body-font-weight: 400;
+
+  /**
+   * @tokens Font Sizes
+   * @presenter FontSize
+   */
+  --text-body-s-font-size: 14px;
+  --text-body-m-font-size: 18px;
+
+  /**
+   * @tokens Line Heights
+   * @presenter LineHeight
+   */
+  --text-body-s-line-height: 18px;
+  --text-body-m-line-height: 24px;
 }
