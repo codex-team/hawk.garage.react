@@ -2,26 +2,26 @@ import React from "react";
 import cn from 'classnames';
 import styles from './Text.module.css';
 
-interface Props<C extends React.ElementType> {
+interface Props<AsElement extends React.ElementType> {
   children?: React.ReactNode,
   className?: string,
 
   weight?: 'regular' | 'medium' | 'bold',
   size?: 's' | 'm',
 
-  as?: C,
+  as?: AsElement,
 }
 
-type TextProps<E extends React.ElementType> = Props<E> & Omit<React.ComponentProps<E>, keyof Props<E>>;
+type TextProps<AsElement extends React.ElementType> = Props<AsElement> & Omit<React.ComponentProps<AsElement>, keyof Props<AsElement>>;
 
-export const Text = <C extends React.ElementType = 'span'>({
+export const Text = <AsElement extends React.ElementType = 'span'>({
   children,
   className,
   weight = 'regular',
   size = 's',
   as,
   ...props
-}: TextProps<C>) => {
+}: TextProps<AsElement>) => {
   const Component = as || 'span';
 
   return (
