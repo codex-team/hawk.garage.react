@@ -7,7 +7,7 @@ export default {
   component: Text
 } as ComponentMeta<typeof Text>;
 
-const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
+const Template: ComponentStory<typeof Text> = (props) => <Text {...props} />;
 
 export const Default = Template.bind({});
 Default.args = { children: 'Text component' };
