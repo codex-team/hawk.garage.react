@@ -30,13 +30,13 @@
    * @tokens Font Sizes
    * @presenter FontSize
    */
-  --text-body-1-font-size: 14px;
-  --text-body-2-font-size: 18px;
+  --text-body-s-font-size: 14px;
+  --text-body-m-font-size: 18px;
 
   /**
    * @tokens Line Heights
    * @presenter LineHeight
    */
-  --text-body-1-line-height: 18px;
-  --text-body-2-line-height: 24px;
+  --text-body-s-line-height: 18px;
+  --text-body-m-line-height: 24px;
 }
