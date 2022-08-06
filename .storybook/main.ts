@@ -7,9 +7,15 @@ const config: StorybookConfig = {
   ],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        'backgrounds': false,
+      }
+    },
     "@storybook/addon-interactions",
-    "storybook-design-token"
+    "storybook-design-token",
+    "storybook-addon-themes"
   ],
   framework: "@storybook/react",
   core: {

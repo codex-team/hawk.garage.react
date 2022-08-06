@@ -1,4 +1,4 @@
-.hds-root-colors-dark  {
+.hds-root-colors-dark {
   /**
   * @tokens Colors Dark
   * @presenter Color
@@ -10,4 +10,8 @@
   --color-bg-main-transparent: rgba(36, 39, 50, 0);
   --color-bg-placeholder: #505b74;
   --color-bg-button-hover: #ecf2ff;
+
+  --color-text-primary: #dbe6ff;
+  --color-text-secondary: #94a0ac;
+  --color-text-highlighted: #719dff;
 }
