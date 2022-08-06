@@ -6,4 +6,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  designToken: {
+    defaultTab: 'Colors',
+    styleInjection:
+      '@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");'
+  }
 }
