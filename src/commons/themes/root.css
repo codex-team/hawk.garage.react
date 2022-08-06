@@ -17,25 +17,26 @@
    * @presenter FontFamily
    */
   --font-family-sans: 'Roboto', sans-serif;
-  --text-body-font-family: var(--font-family-sans);
 
   /**
    * @tokens Font Weights
    * @presenter FontWeight
    */
-  --text-body-font-weight: 400;
+  --text-font-weight-regular: 400;
+  --text-font-weight-medium: 500;
+  --text-font-weight-bold: 700;
 
   /**
    * @tokens Font Sizes
    * @presenter FontSize
    */
-  --text-body-s-font-size: 14px;
-  --text-body-m-font-size: 18px;
+  --text-font-size-s: 14px;
+  --text-font-size-m: 18px;
 
   /**
    * @tokens Line Heights
    * @presenter LineHeight
    */
-  --text-body-s-line-height: 18px;
-  --text-body-m-line-height: 24px;
+  --text-line-height-s: 18px;
+  --text-line-height-m: 24px;
 }
