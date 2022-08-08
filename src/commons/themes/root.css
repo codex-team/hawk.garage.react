@@ -5,6 +5,7 @@
    */
   --space-2-xs: 2px;
   --space-xs: 4px;
+  --space-xss: 6px;
   --space-s: 8px;
   --space-m: 12px;
   --space-l: 16px;
@@ -39,4 +40,6 @@
    */
   --text-line-height-s: 18px;
   --text-line-height-m: 24px;
+
+  --button-action-loading-bg-size: 56px;
 }

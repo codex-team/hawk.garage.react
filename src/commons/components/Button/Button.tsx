@@ -1,13 +1,6 @@
 import React from 'react';
-import styles from './Button.module.pcss';
-
-/**
- * Button sizes
- */
-export enum ButtonSize {
-  General = 'general',
-  Small = 'small'
-}
+import cn from 'classnames';
+import styles from './Button.module.css';
 
 /**
  * Button styles
@@ -20,39 +13,34 @@ export enum ButtonStyle {
 
 interface Props extends React.ButtonHTMLAttributes<React.PropsWithChildren>{
   /**
-   * Button style
+   * Button type
    */
-  styleType?: ButtonStyle | ButtonStyle.Submit,
+  styleType?: ButtonStyle,
 
   /**
-   * Button size
+   * Is button small
    */
-  buttonSize?: ButtonSize | ButtonSize.General,
+  small?: boolean;
 
   /**
    * Is button disabled
    */
-  isDisabled?: boolean,
+  disabled?: boolean,
 
   /**
    * Is button loading
    */
-  isLoading?: boolean,
-
-  /**
-   * Is button rounded
-   */
-  isRounded?: boolean,
+  loading?: boolean,
 
   /**
    * Is button shacking
    */
-  isShacking?: boolean,
+  shacking?: boolean,
 
   /**
-   * Icon path for button
+   * Icon component for button
    */
-  icon?: string,
+  icon?: React.ReactNode,
 }
 
 /**
@@ -60,20 +48,17 @@ interface Props extends React.ButtonHTMLAttributes<React.PropsWithChildren>{
  *
  * @param props - props of component
  */
-const Button: React.FC<Props> = ({ ...props }) => {
+const Button: React.FC<Props> = ({ disabled, loading, shacking, small, ...props }) => {
   return (
-    <button className={ `${styles.button} ${props.styleType ? styles[props.styleType] : ''}
-                         ${props.buttonSize ? styles[props.buttonSize] : ''}
-                         ${props.isRounded ? styles.rounded : ''}
-                         ${props.isShacking ? styles.shacking : ''}
-                         ${props.isDisabled ? styles.disabled : ''} 
-                         ${props.isLoading ? styles.isLoading : ''}` }>
+    <button className={ cn(styles.button, styles[props.styleType || 'secondary'],
+                         small ? styles.small : '',
+                         shacking ? styles.shacking : '',
+                         disabled ? styles.disabled : '',
+                         loading ? styles.loading : '')}>
       { props.icon ?
-        <img src={props.icon} className={styles.icon}/> : null
+        props.icon : ''
       }
-      <div className={styles.text}>
-        { props.children }
-      </div>
+      { props.children }
     </button>
   );
 };
