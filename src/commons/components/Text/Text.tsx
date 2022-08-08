@@ -28,6 +28,11 @@ interface Props<AsElement extends React.ElementType> {
    * 'As' prop helps to use a semantic right tag in the Text component
    */
   as?: AsElement,
+
+  /**
+   * Type of typography to display
+   */
+  typography?: 'label',
 }
 
 type TextProps<AsElement extends React.ElementType> = Props<AsElement> & Omit<React.ComponentProps<AsElement>, keyof Props<AsElement>>;
@@ -38,6 +43,7 @@ export const Text = <AsElement extends React.ElementType = 'span'>({
   weight = 'regular',
   size = 's',
   as,
+  typography,
   ...props
 }: TextProps<AsElement>) => {
   const Component = as || 'span';
@@ -48,6 +54,9 @@ export const Text = <AsElement extends React.ElementType = 'span'>({
         styles.default,
         styles[`weight-${weight}`],
         styles[`size-${size}`],
+        {
+          [styles[`typography-${typography}`]]: typography !== undefined
+        },
         className
       )}
       {...props}

@@ -26,17 +26,25 @@
   --text-font-weight-medium: 500;
   --text-font-weight-bold: 700;
 
+  --text-label-font-weight: var(--text-font-weight-bold);
+
   /**
    * @tokens Font Sizes
    * @presenter FontSize
    */
+  --text-font-size-xs: 12px;
   --text-font-size-s: 14px;
   --text-font-size-m: 18px;
+
+  --text-label-font-size: var(--text-font-size-xs);
 
   /**
    * @tokens Line Heights
    * @presenter LineHeight
    */
+  --text-line-height-xs: 14px;
   --text-line-height-s: 18px;
   --text-line-height-m: 24px;
+
+  --text-label-line-height: var(--text-line-height-xs);
 }
