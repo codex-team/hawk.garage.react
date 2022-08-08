@@ -20,7 +20,7 @@
 }
 
 .small {
-    padding: var(--space-xss) var(--space-s);
+    padding: var(--space-s) var(--space-m);
 }
 
 .submit {
