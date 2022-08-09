@@ -11,7 +11,7 @@ export enum ButtonStyle {
   Secondary = 'secondary',
 }
 
-interface Props extends React.ButtonHTMLAttributes<React.PropsWithChildren>{
+interface Props {
   /**
    * Button type
    */
@@ -41,6 +41,16 @@ interface Props extends React.ButtonHTMLAttributes<React.PropsWithChildren>{
    * Icon component for button
    */
   icon?: React.ReactNode,
+
+  /**
+   * Internal Button component
+   */
+  children?: React.ReactNode,
+
+  /**
+   * Callback function
+   */
+  onClick?: () => void;
 }
 
 /**
@@ -48,17 +58,21 @@ interface Props extends React.ButtonHTMLAttributes<React.PropsWithChildren>{
  *
  * @param props - props of component
  */
-const Button: React.FC<Props> = ({ disabled, loading, shacking, small, ...props }) => {
+const Button: React.FC<Props> = ({ disabled, loading, shacking, small, children, onClick, icon,...props }) => {
   return (
-    <button className={ cn(styles.button, styles[props.styleType || 'secondary'],
-                         small ? styles.small : '',
-                         shacking ? styles.shacking : '',
-                         disabled ? styles.disabled : '',
-                         loading ? styles.loading : '')}>
-      { props.icon ?
-        props.icon : ''
+    <button className={ cn(styles.button,
+                           styles[props.styleType || 'secondary'],
+                           {
+                             [styles.small]: small,
+                             [styles.shacking]: shacking,
+                             [styles.disabled]: disabled,
+                             [styles.loading]: loading
+                           }
+                           )} onClick={onClick}>
+      { icon ?
+        icon : ''
       }
-      { props.children }
+      { children }
     </button>
   );
 };
