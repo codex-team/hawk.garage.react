@@ -4,7 +4,7 @@ import {ComponentMeta, ComponentStory} from '@storybook/react';
 import Button from './Button';
 
 export default {
-    title: 'Example/Button',
+    title: 'Input/Button',
     component: Button,
     argTypes: {
       onClick: { action: 'Clicked'}
