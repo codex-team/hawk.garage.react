@@ -1,6 +1,8 @@
-import type { StorybookConfig } from "@storybook/core-common";
+import type { StorybookViteConfig } from '@storybook/builder-vite';
+import { mergeConfig } from 'vite'
+import postcssNested from "postcss-nested";
 
-const config: StorybookConfig = {
+const config: StorybookViteConfig = {
   stories: [
     "../src/commons/**/*.stories.mdx",
     "../src/commons/**/*.stories.@(js|jsx|ts|tsx)"
@@ -15,7 +17,7 @@ const config: StorybookConfig = {
     },
     "@storybook/addon-interactions",
     "storybook-design-token",
-    "storybook-addon-themes"
+    "storybook-addon-themes",
   ],
   framework: "@storybook/react",
   core: {
@@ -23,7 +25,22 @@ const config: StorybookConfig = {
   },
   features: {
     "storyStoreV7": true
-  }
+  },
+  async viteFinal(config, { configType }) {
+    return mergeConfig(config, {
+          css: {
+          modules: {
+            scopeBehaviour: 'local',
+            localsConvention: 'camelCaseOnly',
+          },
+          postcss: {
+            plugins: [
+              postcssNested
+            ]
+          }
+        }
+    });
+  },
 }
 
 export default config;
