@@ -9,7 +9,14 @@
   --color-accent-brand: #4979e4;
   --color-bg-main-transparent: rgba(36, 39, 50, 0);
   --color-bg-placeholder: #505b74;
+
   --color-bg-button-hover: #ecf2ff;
+  --color-bg-button-submit-hover: #3a61b9;
+  --color-bg-button-warning-hover: #C33A3A;
+  --color-bg-button-warning: #d94848;
+  --color-bg-button-secondary: #50638c;
+
+  --color-loading-lines: #1a1d26;
 
   --color-text-primary: #dbe6ff;
   --color-text-secondary: #94a0ac;

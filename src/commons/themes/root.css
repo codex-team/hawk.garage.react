@@ -46,5 +46,7 @@
   --text-line-height-s: 18px;
   --text-line-height-m: 24px;
 
+  --button-action-loading-bg-size: 56px;
+
   --text-label-line-height: var(--text-line-height-xs);
 }
