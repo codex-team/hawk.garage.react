@@ -1607,6 +1607,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codexteam/icons@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@codexteam/icons@npm:0.0.2"
+  checksum: 7cee7d437cfe88e2a662ccc49dcbadde8f3f954646a839b759ecd233ef3664601adf7b9bba8bfc4e2e3a41d9b1f44c4a14f8e8abba9663dc81e9d9cac8142513
+  languageName: node
+  linkType: hard
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -8850,6 +8857,7 @@ __metadata:
   resolution: "hawk.garage.react@workspace:."
   dependencies:
     "@babel/core": ^7.18.9
+    "@codexteam/icons": ^0.0.2
     "@mdx-js/react": ^1.6.22
     "@storybook/addon-actions": ^6.5.9
     "@storybook/addon-docs": ^6.5.9
