@@ -26,19 +26,28 @@ const config: StorybookViteConfig = {
   features: {
     "storyStoreV7": true
   },
+  typescript: {
+    reactDocgenTypescriptOptions: {
+      check: false,
+      checkOptions: {},
+      reactDocgen: 'react-docgen-typescript',
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+    }
+  },
   async viteFinal(config, { configType }) {
     return mergeConfig(config, {
-          css: {
-          modules: {
-            scopeBehaviour: 'local',
-            localsConvention: 'camelCaseOnly',
-          },
-          postcss: {
-            plugins: [
-              postcssNested
-            ]
-          }
+      css: {
+        modules: {
+          scopeBehaviour: 'local',
+          localsConvention: 'camelCase',
+        },
+        postcss: {
+          plugins: [
+            postcssNested
+          ]
         }
+      }
     });
   },
 }

@@ -46,7 +46,15 @@
   --text-line-height-s: 18px;
   --text-line-height-m: 24px;
 
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+  --border-radius-l: 12px;
+
   --button-action-loading-bg-size: 56px;
+
+  --input-height-s: 30px;
+  --input-height-m: 34px;
+  --input-height-l: 38px;
 
   --text-label-line-height: var(--text-line-height-xs);
 }
