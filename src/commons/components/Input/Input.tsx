@@ -9,7 +9,9 @@ export interface InputProps {
     containerClassName?: string;
 }
 
-export const Input: React.FC<InputProps & React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>> = ({
+type PropsWithHTMLInput = InputProps & React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
+
+export const Input: React.FC<PropsWithHTMLInput> = ({
     size = 'm',
     iconLeft,
     className,
@@ -18,9 +20,11 @@ export const Input: React.FC<InputProps & React.DetailedHTMLProps<React.InputHTM
 }) => {
     return (
         <span className={cn(styles.container, containerClassName)}>
-            <span className={styles.iconLeft}>
-                {Boolean(iconLeft) && iconLeft}
-            </span>
+            {Boolean(iconLeft) &&
+              <span className={styles.iconLeft}>
+                {iconLeft}
+              </span>
+            }
             <input
                 className={cn(
                     styles.input,
