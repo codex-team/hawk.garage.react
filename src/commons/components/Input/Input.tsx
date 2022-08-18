@@ -16,7 +16,6 @@ export const Input: React.FC<InputProps & React.DetailedHTMLProps<React.InputHTM
     containerClassName,
     ...props
 }) => {
-    console.log(styles);
     return (
         <span className={cn(styles.container, containerClassName)}>
             <span className={styles.iconLeft}>
