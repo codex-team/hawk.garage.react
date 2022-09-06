@@ -1,0 +1,15 @@
+.aside {
+    width: 418px;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 76px;
+    background-color: var(--color-bg-tertiary);
+}
+
+.right {
+    width: 342px;
+    background-color: var(--color-bg-secondary);
+}
