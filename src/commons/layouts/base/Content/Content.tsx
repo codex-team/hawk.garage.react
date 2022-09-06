@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 import styles from './Content.module.css'
 
 interface Props extends React.PropsWithChildren{
@@ -10,10 +9,10 @@ interface Props extends React.PropsWithChildren{
  *
  * @param props - props of component
  */
-const Content: React.FC<Props> = ({ ...props }) => {
+const Content: React.FC<Props> = ({ children }) => {
   return (
-    <div className={ cn(styles.content)}>
-      { props.children }
+    <div className={ styles.content}>
+      { children }
     </div>
   );
 };

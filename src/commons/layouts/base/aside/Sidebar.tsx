@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 import styles from './Aside.module.css'
 
 interface Props extends React.PropsWithChildren{
@@ -10,10 +9,10 @@ interface Props extends React.PropsWithChildren{
  *
  * @param props - props of component
  */
-const Sidebar: React.FC<Props> = ({ ...props }) => {
+const Sidebar: React.FC<Props> = ({ children }) => {
   return (
-    <div className={ cn(styles.sidebar)}>
-      { props.children }
+    <div className={ styles.sidebar}>
+      { children }
     </div>
 );
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 import styles from './Aside.module.css'
 
 interface Props extends React.PropsWithChildren{
@@ -10,10 +9,10 @@ interface Props extends React.PropsWithChildren{
  *
  * @param props - props of component
  */
-const Aside: React.FC<Props> = ({ ...props }) => {
+const Aside: React.FC<Props> = ({ children }) => {
   return (
-    <aside className={ cn(styles.aside)}>
-      { props.children }
+    <aside className={ styles.aside}>
+      { children }
     </aside>
   );
 };

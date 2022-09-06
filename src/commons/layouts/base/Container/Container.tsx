@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 import styles from './Container.module.css'
 
 interface Props extends React.PropsWithChildren{
@@ -12,7 +11,7 @@ interface Props extends React.PropsWithChildren{
  */
 const Container: React.FC<Props> = ({ ...props }) => {
   return (
-    <div className={ cn(styles.container)}>
+    <div className={ styles.container}>
       { props.children }
     </div>
   );

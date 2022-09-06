@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 import styles from './Aside.module.css'
 
 interface Props extends React.PropsWithChildren{
@@ -10,10 +9,10 @@ interface Props extends React.PropsWithChildren{
  *
  * @param props - props of component
  */
-const RightAside: React.FC<Props> = ({ ...props }) => {
+const RightAside: React.FC<Props> = ({ children }) => {
   return (
-    <div className={ cn(styles.right)}>
-      { props.children }
+    <div className={ styles.right}>
+      { children }
     </div>
   );
 };
