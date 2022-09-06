@@ -1,7 +1,11 @@
 import React from "react";
 import styles from './Container.module.css'
 
-interface Props extends React.PropsWithChildren{
+interface Props{
+  /**
+   * Array of column components for layout
+   */
+  columns: Array<React.ReactNode>,
 }
 
 /**
@@ -9,11 +13,11 @@ interface Props extends React.PropsWithChildren{
  *
  * @param props - props of component
  */
-const Container: React.FC<Props> = ({ children }) => {
+const Container: React.FC<Props> = ({ columns }) => {
   return (
-    <div className={ styles.container}>
-      { children }
-    </div>
+  <div className={styles.container}>
+    { columns }
+  </div>
   );
 };
 

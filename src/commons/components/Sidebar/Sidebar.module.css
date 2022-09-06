@@ -1,15 +1,13 @@
-.aside {
-    width: 418px;
+.sidebar {
     height: 100vh;
-    display: flex;
 }
 
-.sidebar {
+.workspace {
     width: 76px;
     background-color: var(--color-bg-tertiary);
 }
 
-.right {
+.project {
     width: 342px;
     background-color: var(--color-bg-secondary);
 }

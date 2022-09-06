@@ -5,7 +5,7 @@ interface Props extends React.PropsWithChildren{
 }
 
 /**
- * Content layout
+ * Content component
  *
  * @param props - props of component
  */
