@@ -9,7 +9,7 @@ interface Props extends React.PropsWithChildren{
  *
  * @param props - props of component
  */
-const Container: React.FC<Props> = ({ ...props }) => {
+const Container: React.FC<Props> = ({ children }) => {
   return (
     <div className={ styles.container}>
       { props.children }
