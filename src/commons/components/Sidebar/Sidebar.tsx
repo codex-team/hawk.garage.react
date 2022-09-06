@@ -16,7 +16,7 @@ interface Props extends React.PropsWithChildren{
  */
 const Sidebar: React.FC<Props> = ({ children, className }) => {
   return (
-    <div className={ cn(styles.sidebar, className || styles.workspace) }>
+    <div className={ cn(styles.sidebar, className) }>
       { children }
     </div>
 );
