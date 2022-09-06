@@ -12,7 +12,7 @@ interface Props extends React.PropsWithChildren{
 const Container: React.FC<Props> = ({ children }) => {
   return (
     <div className={ styles.container}>
-      { props.children }
+      { children }
     </div>
   );
 };
