@@ -10,9 +10,10 @@ interface Props extends React.PropsWithChildren{
 }
 
 /**
- * Sidebar component
+ * Base for sidebar component
  *
- * @param props - props of component
+ * @param children - internal component to show
+ * @param className - class name for sidebar
  */
 const Sidebar: React.FC<Props> = ({ children, className }) => {
   return (

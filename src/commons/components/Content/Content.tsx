@@ -5,9 +5,9 @@ interface Props extends React.PropsWithChildren{
 }
 
 /**
- * Content component
+ * Base for content component, to show project information
  *
- * @param props - props of component
+ * @param children - internal component to show
  */
 const Content: React.FC<Props> = ({ children }) => {
   return (

@@ -5,13 +5,13 @@ interface Props{
   /**
    * Array of column components for layout
    */
-  columns: Array<React.ReactNode>,
+  columns: React.ReactNode[],
 }
 
 /**
- * Container layout
+ * Base layout for drawing components in columns
  *
- * @param props - props of component
+ * @param columns - array of components to draw in columns
  */
 const Container: React.FC<Props> = ({ columns }) => {
   return (
