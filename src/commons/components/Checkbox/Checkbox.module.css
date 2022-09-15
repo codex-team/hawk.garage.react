@@ -1,0 +1,39 @@
+.checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--color-bg-secondary);
+    margin: 0;
+    width: var(--space-2-xl);
+    height: var(--space-2-xl);
+    border: 1px solid var(--color-bg-tertiary);
+    border-radius: var(--border-radius-s);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:not(&.disabled):hover {
+         background-color: var(--color-bg-tertiary);
+    }
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.checkbox::before {
+    content: url("../public/tick.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    transform: scale(0);
+    transition: 150ms transform ease-in;
+    background-color: var(--color-checked);
+}
+
+.checkbox:checked::before {
+    transform: scale(1);
+}
