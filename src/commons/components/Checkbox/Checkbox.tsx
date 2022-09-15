@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import cn from 'classnames';
 import styles from './Checkbox.module.css';
 
@@ -26,12 +26,21 @@ interface Props {
  * @param props - props of component
  */
 const Checkbox: React.FC<Props> = ({ disabled, checked, onClick,...props }) => {
+  const [checkedState, setChecked] = React.useState(checked);
+
+  useEffect(() => {
+    setChecked(checked);
+  }, [checked])
+
   return (
-    <input type={'checkbox'} className={ cn(styles.checkbox,
-      {
-        [styles.disabled]: disabled,
-      }
-    )} onClick={onClick} checked={checked} disabled={disabled}>
+    <input type={'checkbox'}
+           className={styles.checkbox}
+           onClick={() => {
+             setChecked(!checkedState);
+             onClick ? onClick(): null;
+           }}
+           checked={checkedState}
+           disabled={disabled}>
     </input>
   );
 };
