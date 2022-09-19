@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
-import cn from 'classnames';
+import React from 'react';
 import styles from './Checkbox.module.css';
+import Tick from '../../../assets/tick.svg?component'
+import { noop } from "lodash";
 
 interface Props {
 
@@ -17,7 +18,7 @@ interface Props {
   /**
    * Callback function for checked checkbox
    */
-  onClick?: () => void;
+  onChange?: ( state: boolean ) => void;
 }
 
 /**
@@ -25,23 +26,27 @@ interface Props {
  *
  * @param props - props of component
  */
-const Checkbox: React.FC<Props> = ({ disabled, checked, onClick,...props }) => {
-  const [checkedState, setChecked] = React.useState(checked);
+const Checkbox: React.FC<Props> = ({ disabled, checked, onChange = noop, ...props }) => {
 
-  useEffect(() => {
-    setChecked(checked);
-  }, [checked])
+  const onClick =  () => {
+    onChange(!checked);
+  }
 
   return (
+    <div className={styles.wrapper}>
     <input type={'checkbox'}
            className={styles.checkbox}
-           onClick={() => {
-             setChecked(!checkedState);
-             onClick ? onClick(): null;
-           }}
-           checked={checkedState}
-           disabled={disabled}>
-    </input>
+           onClick={onClick}
+           checked={checked}
+           disabled={disabled}
+           id={'cb'}
+           {...props}/>
+      <label htmlFor={'cb'}>
+        <div className={styles.mark}>
+          <Tick/>
+        </div>
+      </label>
+    </div>
   );
 };
 

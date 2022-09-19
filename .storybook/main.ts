@@ -1,6 +1,7 @@
 import type { StorybookViteConfig } from '@storybook/builder-vite';
 import { mergeConfig } from 'vite'
 import postcssNested from "postcss-nested";
+import svgr from "@honkhonk/vite-plugin-svgr";
 
 const config: StorybookViteConfig = {
   stories: [
@@ -37,6 +38,7 @@ const config: StorybookViteConfig = {
   },
   async viteFinal(config, { configType }) {
     return mergeConfig(config, {
+      plugins: [svgr()],
       css: {
         modules: {
           scopeBehaviour: 'local',

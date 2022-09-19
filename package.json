@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
+    "@honkhonk/vite-plugin-svgr": "^1.1.0",
     "@mdx-js/react": "^1.6.22",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-docs": "^6.5.9",
@@ -26,6 +27,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/babel__core": "^7",
     "@types/eslint": "^7",
+    "@types/lodash": "^4",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "latest",
@@ -44,6 +46,7 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
     "postcss-nested": "^5.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

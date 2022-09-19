@@ -1,6 +1,12 @@
+.wrapper {
+    padding: 0;
+    margin: 0;
+}
+
 .checkbox {
-    -webkit-appearance: none;
-    appearance: none;
+    display: none;
+}
+.checkbox + label {
     background-color: var(--color-bg-secondary);
     margin: 0;
     width: var(--space-2-xl);
@@ -11,18 +17,22 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    &:not(&.disabled):hover {
-         background-color: var(--color-bg-tertiary);
-    }
 }
 
-.disabled {
+.checkbox:disabled + label {
     cursor: not-allowed;
     opacity: 0.5;
 }
 
-.checkbox::before {
-    content: url("../public/tick.svg");
+.checkbox:not(.checkbox:disabled) + label:hover {
+    background-color: var(--color-bg-tertiary);
+}
+
+.mark {
+    svg {
+        color: white;
+        position: absolute;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +44,6 @@
     background-color: var(--color-checked);
 }
 
-.checkbox:checked::before {
+.checkbox:checked + label > .mark {
     transform: scale(1);
 }
