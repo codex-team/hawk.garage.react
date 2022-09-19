@@ -41,6 +41,7 @@ const Checkbox: React.FC<Props> = ({ disabled, checked, onChange = noop, ...prop
          onClick={onClick}>
       <input type={'checkbox'}
              checked={checked}
+             onClick={onClick}
              {...props}/>
       <Tick className={styles.icon}/>
     </div>
