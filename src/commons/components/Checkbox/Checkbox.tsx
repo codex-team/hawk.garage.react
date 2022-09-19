@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Checkbox.module.css';
 import Tick from '../../../assets/tick.svg?component'
 import { noop } from "lodash";
+import cn from 'classnames';
 
 interface Props {
 
@@ -28,24 +29,20 @@ interface Props {
  */
 const Checkbox: React.FC<Props> = ({ disabled, checked, onChange = noop, ...props }) => {
 
-  const onClick =  () => {
-    onChange(!checked);
+  const onClick = () => {
+    !disabled ? onChange(!checked) : null;
   }
 
   return (
-    <div className={styles.wrapper}>
-    <input type={'checkbox'}
-           className={styles.checkbox}
-           onClick={onClick}
-           checked={checked}
-           disabled={disabled}
-           id={'cb'}
-           {...props}/>
-      <label htmlFor={'cb'}>
-        <div className={styles.mark}>
-          <Tick/>
-        </div>
-      </label>
+    <div className={cn(styles.checkbox,
+                      {
+                        [styles.disabled]: disabled,
+                      })}
+         onClick={onClick}>
+      <input type={'checkbox'}
+             checked={checked}
+             {...props}/>
+      <Tick className={styles.icon}/>
     </div>
   );
 };
