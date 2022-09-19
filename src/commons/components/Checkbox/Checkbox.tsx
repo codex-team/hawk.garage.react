@@ -30,7 +30,10 @@ interface Props {
 const Checkbox: React.FC<Props> = ({ disabled, checked, onChange = noop, ...props }) => {
 
   const onClick = () => {
-    !disabled ? onChange(!checked) : null;
+    if (disabled) {
+      return;
+    }
+    onChange(!checked);
   }
 
   return (
