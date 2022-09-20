@@ -30,23 +30,18 @@ interface Props {
 const Checkbox: React.FC<Props> = ({ disabled, checked, onChange = noop, ...props }) => {
 
   const onClick = () => {
-    if (disabled) {
-      return;
-    }
     onChange(!checked);
   }
 
   return (
-    <div className={cn(styles.checkbox,
-                      {
-                        [styles.disabled]: disabled,
-                      })}
-         onClick={onClick}>
+    <div className={styles.wrapper}>
       <input type={'checkbox'}
+             className={styles.checkbox}
              checked={checked}
              onClick={onClick}
+             disabled={disabled}
              {...props}/>
-      <Tick className={styles.icon}/>
+      <Tick className={styles.mark}/>
     </div>
   );
 };
