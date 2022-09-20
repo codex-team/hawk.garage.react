@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Checkbox.module.css';
 import Tick from '../../../assets/tick.svg?component'
 import { noop } from "lodash";
-import cn from 'classnames';
 
 interface Props {
 
