@@ -33,7 +33,7 @@
 .checkbox + .mark {
     position: absolute;
     pointer-events:none;
-    padding: 3px;
+    padding: var(--space-2-xs);
     color: white;
     background-color: var(--color-checked);
     border-radius: 2px;
