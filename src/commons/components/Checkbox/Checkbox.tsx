@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Checkbox.module.css';
 import Tick from '../../../assets/tick.svg?component'
 import { noop } from "lodash";
+import cn from "classnames";
 
 interface Props {
 
@@ -19,6 +20,11 @@ interface Props {
    * Callback function for checked checkbox
    */
   onChange?: ( state: boolean ) => void;
+
+  /**
+   * Classname for styling wrapper
+   */
+  className?: string;
 }
 
 /**
@@ -26,14 +32,14 @@ interface Props {
  *
  * @param props - props of component
  */
-const Checkbox: React.FC<Props> = ({ disabled, checked, onChange = noop, ...props }) => {
+const Checkbox: React.FC<Props> = ({ disabled, checked, onChange = noop, className, ...props }) => {
 
   const onClick = () => {
     onChange(!checked);
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={cn(styles.wrapper, className)}>
       <input type={'checkbox'}
              className={styles.checkbox}
              checked={checked}
