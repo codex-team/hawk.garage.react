@@ -1,16 +1,16 @@
-
 import React, { ReactElement } from 'react';
 import styles from './App.module.css';
 import {Link, Route, Routes} from "react-router-dom";
 import {Login} from "./pages/Login/Login";
 import {Logout} from "./pages/Logout";
+import cn from "classnames";
 
 /**
  * Application root component
  */
 function App(): ReactElement {
   return (
-    <div className={styles.app}>
+    <div className={cn('hds-root-colors-dark', 'hds-root-colors-light', 'hds-root', styles.app)}>
       <nav>
         <Link to="/login">Login page</Link>
         <Link to="/logout">Logout page</Link>
