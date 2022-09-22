@@ -6,7 +6,6 @@ import {Fieldset} from "../../commons/components/Fieldset/Fieldset";
 
 export const Login: React.FC = () => {
   return (
-    <div className={styles.container}>
       <Base>
         <Fieldset className={styles.fieldset} label={'email address'} type={'email'} name={'email'} placeholder={'name@best-team.com'}/>
         <Fieldset className={styles.fieldset} label={'password'} type={'password'} name={'password'} placeholder={'********'}/>
@@ -17,6 +16,5 @@ export const Login: React.FC = () => {
           <a href={"/recover"}>Recover password</a>
         </div>
       </Base>
-    </div>
   );
 }

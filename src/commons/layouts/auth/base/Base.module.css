@@ -8,6 +8,7 @@
     background-color: var(--color-bg-secondary);
     color: var(--color-text-primary);
     font-size: var(--text-font-size-s);
+    font-family: var(--font-family-sans);
 }
 
 .title {
