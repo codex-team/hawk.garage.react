@@ -1,7 +1,8 @@
+
 import React, { ReactElement } from 'react';
 import styles from './App.module.css';
 import {Link, Route, Routes} from "react-router-dom";
-import {Login} from "./pages/Login";
+import {Login} from "./pages/Login/Login";
 import {Logout} from "./pages/Logout";
 
 /**
