@@ -60,9 +60,9 @@
         color: var(--color-text-secondary);
         font-size: var(--text-font-size-m);
         font-weight: var(--text-font-weight-bold);
-    }
-    a:hover {
-        color: var(--color-text-primary);
+        &:hover {
+            color: var(--color-text-primary);
+        }
     }
 }
 
