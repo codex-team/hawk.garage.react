@@ -7,7 +7,7 @@ import {Fieldset} from "../../commons/components/Fieldset/Fieldset";
 export const Login: React.FC = () => {
   return (
       <Base>
-        <Fieldset className={styles.fieldset} label={'email address'} type={'email'} name={'email'} placeholder={'name@best-team.com'}/>
+        <Fieldset className={styles.fieldset} label={'email address'} type={'email'} name={'email'} placeholder={'name@best-team.com'} autocomplete={'email'}/>
         <Fieldset className={styles.fieldset} label={'password'} type={'password'} name={'password'} placeholder={'********'}/>
         <div className={styles.action}>
           <Button styleType={ButtonStyle.Submit}>

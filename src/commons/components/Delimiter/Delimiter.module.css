@@ -1,6 +1,5 @@
 .delimiter {
     height: 1px;
-    background: var(--color-text-primary);
+    background: var(--color-delimiter);
     border: 0;
-    opacity: 0.11;
 }
