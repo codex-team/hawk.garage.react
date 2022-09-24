@@ -5,8 +5,8 @@ import svgr from "@honkhonk/vite-plugin-svgr";
 
 const config: StorybookViteConfig = {
   stories: [
-    "../src/commons/**/*.stories.mdx",
-    "../src/commons/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/**/*.stories.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
@@ -19,6 +19,7 @@ const config: StorybookViteConfig = {
     "@storybook/addon-interactions",
     "storybook-design-token",
     "storybook-addon-themes",
+    "storybook-addon-react-router-v6",
   ],
   framework: "@storybook/react",
   core: {

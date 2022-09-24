@@ -5,6 +5,7 @@
 body {
     color: var(--color-text-primary);
     background: var(--color-bg-primary);
+    padding: 0 !important;
 }
 
 * {
