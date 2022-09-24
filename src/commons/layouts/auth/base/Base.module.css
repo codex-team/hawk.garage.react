@@ -23,7 +23,7 @@
     margin-bottom: var(--space-xl);
 }
 
-.login {
+.formContainer {
     display: flex;
     height: 345px;
     background-color: var(--color-bg-primary);
@@ -55,14 +55,20 @@
 .links {
     display: flex;
     justify-content: space-between;
-    a {
-        text-decoration: none;
-        color: var(--color-text-secondary);
-        font-size: var(--text-font-size-m);
-        font-weight: var(--text-font-weight-bold);
-        &:hover {
-            color: var(--color-text-primary);
-        }
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    font-size: var(--text-font-size-m);
+    font-weight: var(--text-font-weight-bold);
+
+    &:hover {
+        color: var(--color-text-primary);
+    }
+
+    &Active {
+        color: var(--color-text-primary);
     }
 }
 

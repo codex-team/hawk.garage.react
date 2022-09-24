@@ -2,6 +2,8 @@ import React from "react";
 import styles from './Base.module.css';
 import {Text} from "../../../components/Text/Text";
 import Delimiter from "../../../components/Delimiter/Delimiter";
+import {NavLink} from "react-router-dom";
+import cn from "classnames";
 
 interface Props extends React.PropsWithChildren {}
 
@@ -10,12 +12,22 @@ export const Base: React.FC<Props> = ({children}) => {
     <div className={styles.container}>
       <Text weight={"bold"} size={"m"} className={styles.title}>Hawk</Text>
       <Text className={styles.caption}>Time for quality</Text>
-      <div className={styles.login}>
+      <div className={styles.formContainer}>
         <div className={styles.picture}/>
         <div className={styles.form}>
           <div className={styles.links}>
-            <a href={"/login"}>Login</a>
-            <a href={"/sign-up"}>Sing up</a>
+            <NavLink
+              to={'/login'}
+              className={({ isActive }) => {
+                return cn(styles.navLink, { [styles.navLinkActive]: isActive })
+              }}
+            >Login</NavLink>
+            <NavLink
+              to={"/sign-up"}
+              className={({ isActive }) => {
+                return cn(styles.navLink, { [styles.navLinkActive]: isActive })
+              }}
+            >Sign up</NavLink>
           </div>
           <Delimiter className={styles.delimiter}/>
           { children }
