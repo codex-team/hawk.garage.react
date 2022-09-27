@@ -13,7 +13,7 @@
 
 .title {
     color: white;
-    font-size: 30px;
+    font-size: var(--text-title-font-size);
     margin-bottom: var(--space-s);
 }
 
@@ -44,12 +44,12 @@
 }
 
 .form {
-    padding: 30px 48px 35px 30px;
+    padding: var(--space-2-xl) var(--space-6-xl) var(--space-4-xl) var(--space-2-xl);
     flex-grow: 1;
 }
 
 .delimiter {
-    margin: 20px 0 25px;
+    margin: var(--space-l) 0 var(--space-xl);
 }
 
 .links {

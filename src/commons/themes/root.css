@@ -11,6 +11,9 @@
   --space-xl: 24px;
   --space-2-xl: 28px;
   --space-3-xl: 32px;
+  --space-4-xl: 36px;
+  --space-5-xl: 40px;
+  --space-6-xl: 44px;
 
   /**
    * @tokens Font Families
@@ -37,6 +40,8 @@
   --text-font-size-m: 18px;
 
   --text-label-font-size: var(--text-font-size-xs);
+
+  --text-title-font-size: 30px;
 
   /**
    * @tokens Line Heights
