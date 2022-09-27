@@ -1,5 +1,5 @@
-import React from "react";
-import styles from '@/commons/components/Content/Content.module.css'
+import React from 'react';
+import styles from '@/commons/components/Content/Content.module.css';
 
 interface Props extends React.PropsWithChildren{
 }

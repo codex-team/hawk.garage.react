@@ -12,30 +12,30 @@ export interface InputProps {
 type PropsWithHTMLInput = InputProps & React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 export const Input: React.FC<PropsWithHTMLInput> = ({
-    size = 'm',
-    iconLeft,
-    className,
-    containerClassName,
-    ...props
+  size = 'm',
+  iconLeft,
+  className,
+  containerClassName,
+  ...props
 }) => {
-    return (
-        <span className={cn(styles.container, containerClassName)}>
-            {Boolean(iconLeft) &&
+  return (
+    <span className={cn(styles.container, containerClassName)}>
+      {Boolean(iconLeft) &&
               <span className={styles.iconLeft}>
                 {iconLeft}
               </span>
-            }
-            <input
-                className={cn(
-                    styles.input,
-                    styles[`size-${size}`],
-                    {
-                        [styles.inputWithIconLeft]: Boolean(iconLeft),
-                    },
-                    className,
-                )}
-                {...props}
-            />
-        </span>
-    )
-}
+      }
+      <input
+        className={cn(
+          styles.input,
+          styles[`size-${size}`],
+          {
+            [styles.inputWithIconLeft]: Boolean(iconLeft),
+          },
+          className
+        )}
+        {...props}
+      />
+    </span>
+  );
+};

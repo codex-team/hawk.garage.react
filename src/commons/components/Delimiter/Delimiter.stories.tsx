@@ -1,7 +1,7 @@
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import Delimiter from "@/commons/components/Delimiter/Delimiter";
+import Delimiter from '@/commons/components/Delimiter/Delimiter';
 
 export default {
   title: 'UI/Delimiter',

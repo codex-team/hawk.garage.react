@@ -1,7 +1,7 @@
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { Fieldset } from "@/commons/components/Fieldset/Fieldset";
+import { Fieldset } from '@/commons/components/Fieldset/Fieldset';
 
 export default {
   title: 'Input/Fieldset',
@@ -18,4 +18,4 @@ Default.args = {
   placeholder: 'name@best-team.com',
   type: 'email',
   name: 'email',
-}
+};
