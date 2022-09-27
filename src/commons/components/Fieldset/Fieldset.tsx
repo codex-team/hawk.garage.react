@@ -44,7 +44,7 @@ interface Props {
 export const Fieldset: React.FC<Props> = ({ placeholder, name, type, label, autocomplete, required, className }) => {
   return (
     <fieldset className={cn(styles.fieldset, className)}>
-      <Label className={styles.label} for={name}>{ label }</Label>
+      <Label className={styles.label} htmlFor={name}>{ label }</Label>
       <Input type={type} autoComplete={autocomplete} name={name} className={styles.input} placeholder={placeholder} required={required}/>
     </fieldset>
   );
