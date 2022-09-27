@@ -5,16 +5,24 @@ import Button, { ButtonStyle } from '@/commons/components/Button/Button';
 import { Fieldset } from '@/commons/components/Fieldset/Fieldset';
 
 export const Login: React.FC = () => {
+  const handleSubmitAction: React.FormEventHandler = async (e): Promise<void> => {
+    e.preventDefault();
+
+    console.log('Handle login form submit');
+  };
+
   return (
     <Base>
-      <Fieldset className={styles.fieldset} label={'email address'} type={'email'} name={'email'} placeholder={'name@best-team.com'} autocomplete={'email'}/>
-      <Fieldset className={styles.fieldset} label={'password'} type={'password'} name={'password'} placeholder={'********'}/>
-      <div className={styles.action}>
-        <Button styleType={ButtonStyle.Submit}>
+      <form onSubmit={handleSubmitAction}>
+        <Fieldset className={styles.fieldset} label={'email address'} type={'email'} name={'email'} placeholder={'name@best-team.com'} autocomplete={'email'}/>
+        <Fieldset className={styles.fieldset} label={'password'} type={'password'} name={'password'} placeholder={'********'}/>
+        <div className={styles.action}>
+          <Button styleType={ButtonStyle.Submit} type="submit">
             Log in
-        </Button>
-        <a href={'/recover'}>Recover password</a>
-      </div>
+          </Button>
+          <a href={'/recover'}>Recover password</a>
+        </div>
+      </form>
     </Base>
   );
 };
