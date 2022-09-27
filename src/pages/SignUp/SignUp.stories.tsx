@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {SignUp} from "./SignUp";
+import {SignUp} from "@/pages/SignUp/SignUp";
 import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {

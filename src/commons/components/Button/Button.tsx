@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import styles from './Button.module.css';
+import styles from '@/commons/components/Button/Button.module.css';
 
 /**
  * Button styles

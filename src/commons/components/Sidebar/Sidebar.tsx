@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import styles from './Sidebar.module.css'
+import styles from '@/commons/components/Sidebar/Sidebar.module.css'
 
 interface Props extends React.PropsWithChildren{
   /**

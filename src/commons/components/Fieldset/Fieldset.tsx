@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './Fieldset.module.css';
-import {Label} from "../Label/Label";
-import {Input} from "../Input/Input";
+import styles from '@/commons/components/Fieldset/Fieldset.module.css';
+import {Label} from "@/commons/components/Label/Label";
+import {Input} from "@/commons/components/Input/Input";
 import cn from "classnames";
 
 interface Props {

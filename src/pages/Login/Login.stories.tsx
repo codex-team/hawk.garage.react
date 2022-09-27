@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Login} from "./Login";
+import {Login} from "@/pages/Login/Login";
 import {withRouter} from "storybook-addon-react-router-v6";
 
 export default {

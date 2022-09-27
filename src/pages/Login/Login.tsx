@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./Login.module.css"
-import {Base} from "../../commons/layouts/auth/base/Base";
-import Button, { ButtonStyle } from "../../commons/components/Button/Button";
-import {Fieldset} from "../../commons/components/Fieldset/Fieldset";
+import styles from "@/pages/Login/Login.module.css"
+import {Base} from "@/commons/layouts/auth/base/Base";
+import Button, { ButtonStyle } from "@/commons/components/Button/Button";
+import {Fieldset} from "@/commons/components/Fieldset/Fieldset";
 
 export const Login: React.FC = () => {
   return (

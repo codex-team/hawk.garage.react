@@ -1,6 +1,6 @@
 import React from "react";
 import cn from 'classnames';
-import styles from './Text.module.css';
+import styles from '@/commons/components/Text/Text.module.css';
 
 interface Props<AsElement extends React.ElementType> {
   /**

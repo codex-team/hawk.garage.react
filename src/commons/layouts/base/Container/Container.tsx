@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './Container.module.css'
+import styles from '@/commons/layouts/base/Container/Container.module.css';
 
 interface Props{
   /**
@@ -13,12 +13,10 @@ interface Props{
  *
  * @param columns - array of components to draw in columns
  */
-const Container: React.FC<Props> = ({ columns }) => {
+export const Container: React.FC<Props> = ({ columns }) => {
   return (
-  <div className={styles.container}>
-    { columns }
-  </div>
+    <div className={styles.container}>
+      { columns }
+    </div>
   );
 };
-
-export default Container;

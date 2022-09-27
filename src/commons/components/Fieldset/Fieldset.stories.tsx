@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import { Fieldset } from "./Fieldset";
+import { Fieldset } from "@/commons/components/Fieldset/Fieldset";
 
 export default {
   title: 'Input/Fieldset',

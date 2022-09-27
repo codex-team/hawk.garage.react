@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Delimiter.module.css';
+import styles from '@/commons/components/Delimiter/Delimiter.module.css';
 import cn from "classnames";
 
 interface Props {

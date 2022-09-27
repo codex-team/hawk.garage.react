@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './Base.module.css';
-import {Text} from "../../../components/Text/Text";
-import Delimiter from "../../../components/Delimiter/Delimiter";
+import styles from '@/commons/layouts/auth/base/Base.module.css';
+import {Text} from "@/commons/components/Text/Text";
+import Delimiter from "@/commons/components/Delimiter/Delimiter";
 import {NavLink} from "react-router-dom";
 import cn from "classnames";
 

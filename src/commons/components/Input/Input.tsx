@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Input.module.css';
+import styles from '@/commons/components/Input/Input.module.css';
 import cn from 'classnames';
 
 export interface InputProps {

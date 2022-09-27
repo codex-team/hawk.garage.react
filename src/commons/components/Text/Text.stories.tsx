@@ -1,6 +1,6 @@
-import {Text} from "./Text";
-import {ComponentMeta, ComponentStory} from "@storybook/react";
 import React from "react";
+import {Text} from "@/commons/components/Text/Text";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {
   title: 'Display/Text',
