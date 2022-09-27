@@ -37,7 +37,7 @@ interface Props<AsElement extends React.ElementType> {
 
 type TextProps<AsElement extends React.ElementType> = Props<AsElement> & Omit<React.ComponentProps<AsElement>, keyof Props<AsElement>>;
 
-export const Text: React.FC = <AsElement extends React.ElementType = 'span'>({
+export const Text = <AsElement extends React.ElementType = 'span'>({
   children,
   className,
   weight = 'regular',
@@ -45,7 +45,7 @@ export const Text: React.FC = <AsElement extends React.ElementType = 'span'>({
   as,
   typography,
   ...props
-}: TextProps<AsElement>) => {
+}: TextProps<AsElement>): React.ReactElement => {
   const Component = as || 'span';
 
   return (
