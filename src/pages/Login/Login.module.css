@@ -1,0 +1,17 @@
+.fieldset {
+    margin-bottom: var(--space-l);
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        text-decoration: none;
+        font-size: var(--text-font-size-s);
+        color: var(--color-text-secondary);
+        &:hover {
+            color: var(--color-text-primary);
+        }
+    }
+}

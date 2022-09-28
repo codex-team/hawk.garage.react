@@ -1,0 +1,5 @@
+.delimiter {
+    height: 1px;
+    background: var(--color-delimiter);
+    border: 0;
+}
