@@ -10,7 +10,7 @@ interface Props extends React.PropsWithChildren {}
 export const Base: React.FC<Props> = ({children}) => {
   return (
     <div className={styles.container}>
-      <Text weight={"bold"} size={"m"} className={styles.title}>Hawk</Text>
+      <Text weight="bold" size="m" className={styles.title}>Hawk</Text>
       <Text className={styles.caption}>Time for quality</Text>
       <div className={styles.formContainer}>
         <div className={styles.picture}/>
@@ -23,7 +23,7 @@ export const Base: React.FC<Props> = ({children}) => {
               }}
             >Login</NavLink>
             <NavLink
-              to={"/sign-up"}
+              to={"/signup"}
               className={({ isActive }) => {
                 return cn(styles.navLink, { [styles.navLinkActive]: isActive })
               }}
