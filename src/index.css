@@ -1,7 +1,7 @@
-@import url('@/commons/themes/root.css');
-@import url('@/commons/themes/root-colors-dark.css');
-@import url('@/commons/themes/root-colors-light.css');
-@import url('@/styles/fonts.css');
+@import url('../src/commons/themes/root.css');
+@import url('../src/commons/themes/root-colors-dark.css');
+@import url('../src/commons/themes/root-colors-light.css');
+@import url('../src/styles/fonts.css');
 
 body {
     margin: 0;
