@@ -4,6 +4,7 @@ env:
   es2021: true
 extends:
   - plugin:react/recommended
+  - codex/ts
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
@@ -13,14 +14,11 @@ parserOptions:
 plugins:
   - react
   - '@typescript-eslint'
-rules: {
-  'react/react-in-jsx-scope': off,
-  '@typescript-eslint/no-unused-vars-experimental': off
-}
 ignorePatterns:
   - 'vite.config.ts'
   - 'src/vite-env.d.ts'
-  - 'dist/*'
+  - 'dist/**/*'
+  - 'scripts/*'
 settings:
   react:
     version: detect

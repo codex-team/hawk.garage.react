@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from '../Text/Text';
+import { Text } from '@/commons/components/Text/Text';
 
 interface LabelProps {
   /**
@@ -18,7 +18,7 @@ interface LabelProps {
   for?: string,
 }
 
-export const Label: React.FC<LabelProps> = ({children, ...props}) => {
+export const Label: React.FC<LabelProps> = ({ children, ...props }) => {
   return (
     <Text
       as="label"
@@ -27,5 +27,5 @@ export const Label: React.FC<LabelProps> = ({children, ...props}) => {
     >
       {children}
     </Text>
-  )
-}
+  );
+};

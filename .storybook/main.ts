@@ -1,7 +1,7 @@
 import type { StorybookViteConfig } from '@storybook/builder-vite';
 import { mergeConfig } from 'vite'
-import postcssNested from "postcss-nested";
 import svgr from "@honkhonk/vite-plugin-svgr";
+import rootViteConfig from '../vite.config';
 
 const config: StorybookViteConfig = {
   stories: [
@@ -37,20 +37,10 @@ const config: StorybookViteConfig = {
       shouldRemoveUndefinedFromOptional: true,
     }
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     return mergeConfig(config, {
+      ...rootViteConfig,
       plugins: [svgr()],
-      css: {
-        modules: {
-          scopeBehaviour: 'local',
-          localsConvention: 'camelCase',
-        },
-        postcss: {
-          plugins: [
-            postcssNested
-          ]
-        }
-      }
     });
   },
 }

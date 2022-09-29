@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import cn from 'classnames';
-import styles from './Text.module.css';
+import styles from '@/commons/components/Text/Text.module.css';
 
 interface Props<AsElement extends React.ElementType> {
   /**
@@ -45,7 +45,7 @@ export const Text = <AsElement extends React.ElementType = 'span'>({
   as,
   typography,
   ...props
-}: TextProps<AsElement>) => {
+}: TextProps<AsElement>): React.ReactElement => {
   const Component = as || 'span';
 
   return (
@@ -55,7 +55,7 @@ export const Text = <AsElement extends React.ElementType = 'span'>({
         styles[`weight-${weight}`],
         styles[`size-${size}`],
         {
-          [styles[`typography-${typography}`]]: typography !== undefined
+          [styles[`typography-${typography}`]]: typography !== undefined,
         },
         className
       )}

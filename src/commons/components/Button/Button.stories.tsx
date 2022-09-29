@@ -1,18 +1,18 @@
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import Button from './Button';
+import Button from '@/commons/components/Button/Button';
 
 export default {
-    title: 'Input/Button',
-    component: Button,
-    argTypes: {
-      onClick: { action: 'Clicked'}
-    }
-  } as ComponentMeta<typeof Button>;
+  title: 'Input/Button',
+  component: Button,
+  argTypes: {
+    onClick: { action: 'Clicked' },
+  },
+} as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (props) => <Button
-    {...props} />;
+  {...props} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Delimiter.module.css';
-import cn from "classnames";
+import styles from '@/commons/components/Delimiter/Delimiter.module.css';
+import cn from 'classnames';
 
 interface Props {
   /**
@@ -14,8 +14,7 @@ interface Props {
  *
  * @param props - props of component
  */
-const Delimiter: React.FC<Props> = ({ className}) => {
-
+const Delimiter: React.FC<Props> = ({ className }) => {
   return (
     <hr className={cn(styles.delimiter, className)}/>
   );

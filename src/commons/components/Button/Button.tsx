@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import styles from './Button.module.css';
+import styles from '@/commons/components/Button/Button.module.css';
 
 /**
  * Button styles
@@ -58,17 +58,17 @@ interface Props {
  *
  * @param props - props of component
  */
-const Button: React.FC<Props> = ({ disabled, loading, shacking, small, children, onClick, icon,...props }) => {
+const Button: React.FC<Props> = ({ disabled, loading, shacking, small, children, onClick, icon, ...props }) => {
   return (
     <button className={ cn(styles.button,
-                           styles[props.styleType || 'secondary'],
-                           {
-                             [styles.small]: small,
-                             [styles.shacking]: shacking,
-                             [styles.disabled]: disabled,
-                             [styles.loading]: loading
-                           }
-                           )} onClick={onClick}>
+      styles[props.styleType || 'secondary'],
+      {
+        [styles.small]: small,
+        [styles.shacking]: shacking,
+        [styles.disabled]: disabled,
+        [styles.loading]: loading,
+      }
+    )} onClick={onClick}>
       { icon ?
         icon : ''
       }

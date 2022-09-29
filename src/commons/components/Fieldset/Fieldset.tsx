@@ -1,8 +1,8 @@
-import React from "react";
-import styles from './Fieldset.module.css';
-import {Label} from "../Label/Label";
-import {Input} from "../Input/Input";
-import cn from "classnames";
+import React from 'react';
+import styles from '@/commons/components/Fieldset/Fieldset.module.css';
+import { Label } from '@/commons/components/Label/Label';
+import { Input } from '@/commons/components/Input/Input';
+import cn from 'classnames';
 
 interface Props {
   /**
@@ -41,11 +41,11 @@ interface Props {
   className?: string;
 }
 
-export const Fieldset: React.FC<Props> = ({placeholder, name, type, label, autocomplete, required, className}) => {
+export const Fieldset: React.FC<Props> = ({ placeholder, name, type, label, autocomplete, required, className }) => {
   return (
     <fieldset className={cn(styles.fieldset, className)}>
       <Label className={styles.label} for={name}>{ label }</Label>
       <Input type={type} autoComplete={autocomplete} name={name} className={styles.input} placeholder={placeholder} required={required}/>
     </fieldset>
   );
-}
+};
