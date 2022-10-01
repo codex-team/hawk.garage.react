@@ -13,7 +13,7 @@ function App(): ReactElement {
     <div className={cn('hds-root', 'hds-root-colors-dark', styles.app)}>
       <Routes>
         <Route path="login" element={<Login />} />
-        <Route path="sign-up" element={<SignUp />} />
+        <Route path="signup" element={<SignUp />} />
       </Routes>
     </div>
   );

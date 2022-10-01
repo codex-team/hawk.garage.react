@@ -9,7 +9,7 @@ export default {
   decorators: [ withRouter ],
   parameters: {
     reactRouter: {
-      routePath: '/sign-up',
+      routePath: '/signup',
     },
   },
 } as ComponentMeta<typeof SignUp>;
