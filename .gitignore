@@ -23,3 +23,6 @@ design-tokens.source.json
 
 # MacOS folders
 **/.DS_Store
+
+# Vite local files
+*.local
