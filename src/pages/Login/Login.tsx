@@ -4,6 +4,7 @@ import { Base } from '@/commons/layouts/auth/base/Base';
 import Button, { ButtonStyle } from '@/commons/components/Button/Button';
 import { Fieldset } from '@/commons/components/Fieldset/Fieldset';
 import { useAuth } from '@/providers/AuthProvider';
+import { Location, useLocation, useNavigate } from 'react-router-dom';
 
 export const Login: React.FC = () => {
   const [email, setEmail] = React.useState('');
@@ -11,6 +12,9 @@ export const Login: React.FC = () => {
   const [loading, setLoading] = React.useState(false);
 
   const { login } = useAuth();
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleEmailFieldChange = (newValue: string): void => {
     setEmail(newValue);
@@ -26,6 +30,11 @@ export const Login: React.FC = () => {
     setLoading(true);
     await login(email, password);
     setLoading(false);
+
+    const state = location.state as { from?: Location } || {};
+    const origin = state.from?.pathname || '/';
+
+    navigate(origin);
   };
 
   return (

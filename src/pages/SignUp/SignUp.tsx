@@ -4,12 +4,15 @@ import { Base } from '@/commons/layouts/auth/base/Base';
 import Button, { ButtonStyle } from '@/commons/components/Button/Button';
 import { Fieldset } from '@/commons/components/Fieldset/Fieldset';
 import { useAuth } from '@/providers/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 export const SignUp: React.FC = () => {
   const [email, setEmail] = React.useState('');
   const [loading, setLoading] = React.useState(false);
 
   const { signup } = useAuth();
+
+  const navigate = useNavigate();
 
   const handleEmailFieldChange = (newValue: string): void => {
     setEmail(newValue);
@@ -21,6 +24,8 @@ export const SignUp: React.FC = () => {
     setLoading(true);
     await signup(email);
     setLoading(false);
+
+    navigate('/login');
   };
 
   return (
