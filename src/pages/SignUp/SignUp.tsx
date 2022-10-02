@@ -3,9 +3,13 @@ import styles from '@/pages/SignUp/SignUp.module.css';
 import { Base } from '@/commons/layouts/auth/base/Base';
 import Button, { ButtonStyle } from '@/commons/components/Button/Button';
 import { Fieldset } from '@/commons/components/Fieldset/Fieldset';
+import { useAuth } from '@/providers/AuthProvider';
 
 export const SignUp: React.FC = () => {
   const [email, setEmail] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
+
+  const { signup } = useAuth();
 
   const handleEmailFieldChange = (newValue: string): void => {
     setEmail(newValue);
@@ -14,7 +18,9 @@ export const SignUp: React.FC = () => {
   const handleSubmitAction: React.FormEventHandler = async (e): Promise<void> => {
     e.preventDefault();
 
-    console.log('Handle sign up form submit', email);
+    setLoading(true);
+    await signup(email);
+    setLoading(false);
   };
 
   return (
@@ -30,7 +36,11 @@ export const SignUp: React.FC = () => {
           value={email}
           onChange={handleEmailFieldChange}
         />
-        <Button styleType={ButtonStyle.Submit} type="submit">
+        <Button
+          styleType={ButtonStyle.Submit}
+          type="submit"
+          loading={loading}
+        >
           Register
         </Button>
       </form>

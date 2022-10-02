@@ -3,10 +3,14 @@ import styles from '@/pages/Login/Login.module.css';
 import { Base } from '@/commons/layouts/auth/base/Base';
 import Button, { ButtonStyle } from '@/commons/components/Button/Button';
 import { Fieldset } from '@/commons/components/Fieldset/Fieldset';
+import { useAuth } from '@/providers/AuthProvider';
 
 export const Login: React.FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
+
+  const { login } = useAuth();
 
   const handleEmailFieldChange = (newValue: string): void => {
     setEmail(newValue);
@@ -19,7 +23,9 @@ export const Login: React.FC = () => {
   const handleSubmitAction: React.FormEventHandler = async (e): Promise<void> => {
     e.preventDefault();
 
-    console.log('Handle login form submit', email, password);
+    setLoading(true);
+    await login(email, password);
+    setLoading(false);
   };
 
   return (
@@ -45,7 +51,11 @@ export const Login: React.FC = () => {
           onChange={handlePasswordFieldChange}
         />
         <div className={styles.action}>
-          <Button styleType={ButtonStyle.Submit} type="submit">
+          <Button
+            styleType={ButtonStyle.Submit}
+            loading={loading}
+            type="submit"
+          >
             Log in
           </Button>
           <a href={'/recover'}>Recover password</a>
