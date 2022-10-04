@@ -16,14 +16,6 @@ export const Login: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleEmailFieldChange = (newValue: string): void => {
-    setEmail(newValue);
-  };
-
-  const handlePasswordFieldChange = (newValue: string): void => {
-    setPassword(newValue);
-  };
-
   const handleSubmitAction: React.FormEventHandler = async (e): Promise<void> => {
     e.preventDefault();
 
@@ -48,7 +40,7 @@ export const Login: React.FC = () => {
           placeholder={'name@best-team.com'}
           autocomplete={'email'}
           value={email}
-          onChange={handleEmailFieldChange}
+          onChange={setEmail}
         />
         <Fieldset
           className={styles.fieldset}
@@ -57,7 +49,7 @@ export const Login: React.FC = () => {
           name={'password'}
           placeholder={'********'}
           value={password}
-          onChange={handlePasswordFieldChange}
+          onChange={setPassword}
         />
         <div className={styles.action}>
           <Button

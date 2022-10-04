@@ -14,10 +14,6 @@ export const SignUp: React.FC = () => {
 
   const navigate = useNavigate();
 
-  const handleEmailFieldChange = (newValue: string): void => {
-    setEmail(newValue);
-  };
-
   const handleSubmitAction: React.FormEventHandler = async (e): Promise<void> => {
     e.preventDefault();
 
@@ -39,7 +35,7 @@ export const SignUp: React.FC = () => {
           placeholder={'name@best-team.com'}
           autocomplete={'email'}
           value={email}
-          onChange={handleEmailFieldChange}
+          onChange={setEmail}
         />
         <Button
           styleType={ButtonStyle.Submit}
