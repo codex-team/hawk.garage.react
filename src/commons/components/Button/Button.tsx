@@ -55,7 +55,7 @@ interface Props {
   /**
    * Type of action of the button
    */
-  type?: 'submit' | 'reset' | 'button' | undefined;
+  type?: 'submit' | 'reset' | 'button';
 }
 
 /**
