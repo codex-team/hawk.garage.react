@@ -39,13 +39,26 @@ interface Props {
    * Classname to style fieldset
    */
   className?: string;
+
+  value?: string;
+
+  onChange?: (newValue: string) => void;
 }
 
-export const Fieldset: React.FC<Props> = ({ placeholder, name, type, label, autocomplete, required, className }) => {
+export const Fieldset: React.FC<Props> = ({ placeholder, name, type, label, autocomplete, required, className, value, onChange }) => {
   return (
     <fieldset className={cn(styles.fieldset, className)}>
-      <Label className={styles.label} for={name}>{ label }</Label>
-      <Input type={type} autoComplete={autocomplete} name={name} className={styles.input} placeholder={placeholder} required={required}/>
+      <Label className={styles.label} htmlFor={name}>{ label }</Label>
+      <Input
+        type={type}
+        autoComplete={autocomplete}
+        name={name}
+        className={styles.input}
+        placeholder={placeholder}
+        required={required}
+        value={value}
+        onChange={onChange}
+      />
     </fieldset>
   );
 };

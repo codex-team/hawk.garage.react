@@ -15,7 +15,7 @@ interface LabelProps {
   /**
    * Id of an element in a form that will be focused after click on this label
    */
-  for?: string,
+  htmlFor?: string,
 }
 
 export const Label: React.FC<LabelProps> = ({ children, ...props }) => {

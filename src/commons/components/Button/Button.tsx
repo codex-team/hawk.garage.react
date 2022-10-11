@@ -51,6 +51,11 @@ interface Props {
    * Callback function
    */
   onClick?: () => void;
+
+  /**
+   * Type of action of the button
+   */
+  type?: 'submit' | 'reset' | 'button';
 }
 
 /**
@@ -58,17 +63,22 @@ interface Props {
  *
  * @param props - props of component
  */
-const Button: React.FC<Props> = ({ disabled, loading, shacking, small, children, onClick, icon, ...props }) => {
+const Button: React.FC<Props> = ({ disabled, loading, shacking, small, children, onClick, icon, styleType, ...props }) => {
   return (
-    <button className={ cn(styles.button,
-      styles[props.styleType || 'secondary'],
-      {
-        [styles.small]: small,
-        [styles.shacking]: shacking,
-        [styles.disabled]: disabled,
-        [styles.loading]: loading,
-      }
-    )} onClick={onClick}>
+    <button
+      className={
+        cn(styles.button,
+          styles[styleType || 'secondary'],
+          {
+            [styles.small]: small,
+            [styles.shacking]: shacking,
+            [styles.disabled]: disabled,
+            [styles.loading]: loading,
+          }
+        )}
+      onClick={onClick}
+      {...props}
+    >
       { icon ?
         icon : ''
       }
