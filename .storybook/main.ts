@@ -2,6 +2,7 @@ import type { StorybookViteConfig } from '@storybook/builder-vite';
 import { mergeConfig } from 'vite'
 import svgr from "@honkhonk/vite-plugin-svgr";
 import rootViteConfig from '../vite.config';
+import { viteStorybookDesignTokenPlugin } from 'storybook-design-token/dist/plugin';
 
 const config: StorybookViteConfig = {
   stories: [
@@ -40,7 +41,10 @@ const config: StorybookViteConfig = {
   async viteFinal(config) {
     return mergeConfig(config, {
       ...rootViteConfig,
-      plugins: [svgr()],
+      plugins: [
+        svgr(),
+        viteStorybookDesignTokenPlugin({}),
+      ],
     });
   },
 }
