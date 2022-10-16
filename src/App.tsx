@@ -1,10 +1,9 @@
 import React, { ReactElement } from 'react';
 import styles from '@/App.module.css';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { Login } from '@/pages/Login/Login';
+import { RouterProvider } from 'react-router-dom';
 import cn from 'classnames';
-import { SignUp } from '@/pages/SignUp/SignUp';
 import { AuthProvider, authProviderValue } from '@/providers/AuthProvider';
+import { router } from '@/router';
 
 /**
  * Application root component
@@ -13,11 +12,7 @@ function App(): ReactElement {
   return (
     <AuthProvider value={authProviderValue}>
       <div className={cn('hds-root', 'hds-root-colors-dark', styles.app)}>
-        <Routes>
-          <Route index element={<Navigate to={'/login'} />} /> {/* @TODO - replace redirect by the main component */}
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<SignUp />} />
-        </Routes>
+        <RouterProvider router={router} />
       </div>
     </AuthProvider>
   );
