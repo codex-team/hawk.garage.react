@@ -19,7 +19,7 @@ dist/*
 
 # Storybook
 storybook-static/*
-design-tokens.source.json
+public/design-tokens.source.json
 
 # MacOS folders
 **/.DS_Store

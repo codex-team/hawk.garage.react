@@ -18,7 +18,6 @@ ignorePatterns:
   - 'vite.config.ts'
   - 'src/vite-env.d.ts'
   - 'dist/**/*'
-  - 'scripts/*'
 settings:
   react:
     version: detect
